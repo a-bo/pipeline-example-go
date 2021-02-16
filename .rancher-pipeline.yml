@@ -19,3 +19,11 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+notification:
+  recipients:
+  - recipient: "2"
+    notifier: c-pmpsm:n-pdx5h
+  condition:
+  - Success
+  - Changed
+  - Failed
